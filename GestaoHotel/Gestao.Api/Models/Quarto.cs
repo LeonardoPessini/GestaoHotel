@@ -1,6 +1,4 @@
-﻿
-using Gestao.Api.Models.Interfaces;
-using System.Security.Cryptography.X509Certificates;
+﻿using Gestao.Api.Models.Interfaces;
 
 namespace Gestao.Api.Models;
 

@@ -1,12 +1,6 @@
 ﻿using Bogus;
-using Bogus.Extensions;
 using Gestao.Api.Models;
 using Gestao.Api.Models.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gestao.Test.Builds;
 internal class QuartoBuild

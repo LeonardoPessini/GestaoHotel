@@ -1,11 +1,6 @@
 ﻿using Bogus;
 using Bogus.Extensions.Brazil;
 using Gestao.Api.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gestao.Test.Builds;
 internal class PessoaBuild

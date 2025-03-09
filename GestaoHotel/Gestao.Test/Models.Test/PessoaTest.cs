@@ -1,11 +1,6 @@
 ﻿using Gestao.Test.Utils;
 using Bogus;
 using Bogus.Extensions.Brazil;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Gestao.Api.Models;
 using Gestao.Test.Builds;
 
