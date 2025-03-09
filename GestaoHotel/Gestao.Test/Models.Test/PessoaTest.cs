@@ -25,7 +25,7 @@ public class PessoaTest
         var cpf = RandomCpf();
         var idade = _faker.Random.Int(18, 100);
 
-        var pessoa = new Pessoa(id, nome, cpf, idade);
+        var pessoa = new Pessoa(nome, cpf, idade) { Id = id };
 
         Assert.Equal(id, pessoa.Id);
         Assert.Equal(nome, pessoa.Nome);

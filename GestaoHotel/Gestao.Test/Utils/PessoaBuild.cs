@@ -37,7 +37,7 @@ internal class PessoaBuild
     }
 
     public Pessoa Build(){
-        return new Pessoa(id: _id, nome: _nome, cpf: _cpf, idade: _idade);
+        return new Pessoa(nome: _nome, cpf: _cpf, idade: _idade) { Id = _id };
     }
 
     public PessoaBuild WithId(int id){ 
