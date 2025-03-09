@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gestao.Test.Utils;
+namespace Gestao.Test.Builds;
 internal class PessoaBuild
 {
     private int _id;
@@ -33,21 +33,24 @@ internal class PessoaBuild
         var cpf = faker.Person.Cpf().Replace(".", "").Replace("-", "");
         var idade = faker.Random.Int(18, 100);
 
-        return new PessoaBuild(id,nome,cpf,idade);
+        return new PessoaBuild(id, nome, cpf, idade);
     }
 
-    public Pessoa Build(){
+    public Pessoa Build()
+    {
         return new Pessoa(nome: _nome, cpf: _cpf, idade: _idade) { Id = _id };
     }
 
-    public PessoaBuild WithId(int id){ 
-        _id = id; 
-        return this; 
+    public PessoaBuild WithId(int id)
+    {
+        _id = id;
+        return this;
     }
 
-    public PessoaBuild WithName(string name) {
-        _nome = name; 
-        return this; 
+    public PessoaBuild WithName(string name)
+    {
+        _nome = name;
+        return this;
     }
 
     public PessoaBuild WithCpf(string cpf)

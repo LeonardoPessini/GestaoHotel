@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gestao.Api.Models;
+using Gestao.Test.Builds;
 
 namespace Gestao.Test.Models.Test;
 public class PessoaTest
@@ -28,6 +29,21 @@ public class PessoaTest
         var pessoa = new Pessoa(nome, cpf, idade) { Id = id };
 
         Assert.Equal(id, pessoa.Id);
+        Assert.Equal(nome, pessoa.Nome);
+        Assert.Equal(cpf, pessoa.Cpf);
+        Assert.Equal(idade, pessoa.Idade);
+    }
+
+    [Fact]
+    public void DeveCriarPessoaSemInformarOId()
+    {
+        var nome = _faker.Person.FullName;
+        var cpf = RandomCpf();
+        var idade = _faker.Random.Int(18, 100);
+
+        var pessoa = new Pessoa(nome, cpf, idade);
+
+        Assert.Equal(0, pessoa.Id);
         Assert.Equal(nome, pessoa.Nome);
         Assert.Equal(cpf, pessoa.Cpf);
         Assert.Equal(idade, pessoa.Idade);
